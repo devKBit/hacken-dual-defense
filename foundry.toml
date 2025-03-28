@@ -2,5 +2,30 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/", 
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/", 
+    "ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/", 
+    "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/", 
+    "forge-std/=lib/forge-std/src/", 
+    "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/", 
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/", 
+    "openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/", 
+    "solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/", 
+]
+
+evm_version = 'cancun'
+solc = '0.8.26'
+
+optimizer = true
+optimizer_runs = 10
+
+[fmt]
+sort_imports=true
+single_line_statement_blocks = "preserve"
+multiline_func_header = "attributes_first"
+number_underscore="thousands"
+line_length=140
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
